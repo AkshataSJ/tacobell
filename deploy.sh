@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $ENVIRONMENT = "DEV1TEAM" ]
+if [ $ENVIRONMENT = "DEV1TEAM" ];
 then
 sshpass -p "gamutp" scp target/tacobell.war gamutp@172.17.0.2:/home/gamutp/distros/apache-tomcat/webapps
          echo "Starting tomcat server in $i QA server"
