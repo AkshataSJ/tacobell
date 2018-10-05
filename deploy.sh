@@ -7,7 +7,7 @@ sshpass -p "gamutp" scp target/tacobell.war gamutp@172.17.0.2:/home/gamutp/distr
          sleep 3
 sshpass -p "gamutp" ssh gamutp@172.17.0.2 "JAVA_HOME=/home/gamutp/jdk1.8.0_181"/home/ccd/distros/apache-tomcat/bin/startup.sh
 
-elif [$ENVIRONMENT= "DEV2TEAM"] 
+elif [ $ENVIRONMENT= "DEV2TEAM" ] 
 
 then
 
