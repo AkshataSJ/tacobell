@@ -1,20 +1,21 @@
 #!/bin/sh
 
-if [ $ENVIRONMENT = "DEV1TEAM" ];
+if [ $ENVIRONMENT = "DEP2" ];
 then
-sshpass -p "gamutp" scp target/tacobell.war gamutp@172.17.0.2:/home/gamutp/distros/apache-tomcat/webapps
+sshpass -p "dev2team" scp target/tacobell.war dev2team@172.17.0.3:/home/dev2team/distros/apache-tomcat/webapps
          echo "Starting tomcat server in $i QA server"
          sleep 3
-sshpass -p "gamutp" ssh gamutp@172.17.0.2 "JAVA_HOME=/home/gamutp/jdk1.8.0_181"/home/gamutp/distros/apache-tomcat/bin/startup.sh
+sshpass -p "dev2team" ssh dev2team@172.17.0.3 "JAVA_HOME=/home/dev2team/jdk1.8.0_181"/home/dev2team/distros/apache-tomcat/bin/startup.sh
 
-elif [ $ENVIRONMENT= "DEV2TEAM" ] 
+elif [ $ENVIRONMENT= "DEP3" ] 
 then
 
 
-sshpass -p "sitdeploy" scp target/tacobell.war sitdeploy@172.17.0.3:/home/sitdeploy/distros/apache-tomcat/webapps
+sshpass -p "dev3team" scp target/tacobell.war dev3team@172.17.0.2:/home/dev3team/distros/apache-tomcat/webapps
          echo "Starting tomcat server in $i QA server"
          sleep 3
-sshpass -p "sitdeploy" ssh sitdeploy@172.17.0.3 "JAVA_HOME=/home/sitdeploy/distros/jdk1.8"/home/sitdeploy/distros/apache-tomcat/bin/startup.sh
+sshpass -p "dev3team" ssh dev3team@172.17.0.2 "JAVA_HOME=/home/dev3team/distros/jdk1.8"/home/dev3team/distros/apache-tomcat/bin/startup.sh
+
 
 
 
