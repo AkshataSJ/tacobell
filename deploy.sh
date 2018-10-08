@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $ENVIRONMENT = "DEP2" ];
+if [ $ENVIRONMENT = "DEP2" ]
 then
 sshpass -p "dev2team" scp target/tacobell.war dev2team@172.17.0.3:/home/dev2team/distros/apache-tomcat/webapps
          echo "Starting tomcat server in $i QA server"
